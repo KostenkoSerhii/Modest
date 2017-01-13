@@ -1,0 +1,112 @@
+header
+	background: #1d2126
+	.container
+	padding-top: 24px
+	padding-bottom: 23px
+.header__logo
+	float: left
+	margin-top: 8px
+.header__menu
+	float: right
+	+r(768)
+		float: none
+		display: none
+.menu__item
+	display: inline-block
+	&:nth-of-type(1)
+		margin-right: 27px
+	&:nth-of-type(2)
+		margin-right: 15px
+	&:nth-of-type(3)
+		margin-right: 15px
+	&:nth-of-type(4)
+		margin-right: 13px
+	&:nth-of-type(5)
+		margin-right: 3px
+	&:nth-of-type(6)
+		margin-right: 5px
+	&:nth-of-type(7)
+		margin-right: 9px
+	+r(992)
+		&:nth-of-type(1),
+		&:nth-of-type(2),
+		&:nth-of-type(3),
+		&:nth-of-type(4),
+		&:nth-of-type(5),
+		&:nth-of-type(6),
+		&:nth-of-type(7)
+			margin-right: 0px
+	+r(768)
+		display: block
+		text-align: center
+	a
+		display: block
+		position: relative
+		padding: 7px 10px
+		color: #a4aead
+		text-transform: uppercase
+		font: 600 14px/18px sans-serif 
+		+r(768)
+			padding: 1em 10px
+		&:before
+			content: ''
+			+coverdiv
+			border: 2px solid #5b6168
+			border-radius: 5px
+			transition: all .3s
+			opacity: 0
+			-webkit-transform: translate(-3px, 3px)
+			-moz-transform: translate(-3px, 3px)
+			transform: translate(-3px, 3px)
+		+rmin(1200)
+			&:hover 
+				&:before
+					opacity: 1
+					-webkit-transform: translate(0px, 0px)
+					-moz-transform: translate(0px, 0px)
+					transform: translate(0px, 0px)
+		+r(768)
+			&:before
+				display: none
+.menu__item-active
+	a
+		color: #23b7a4
+		&:before
+			border: 2px solid #23b7a4
+			opacity: 1
+			-webkit-transform: translate(0px, 0px)
+			-moz-transform: translate(0px, 0px)
+			transform: translate(0px, 0px)
+.header__menu-btn
+	position: absolute
+	right: 15px
+	top: 9px
+	display: none
+	width: 30px
+	height: 18px
+	border-top: 4px solid #23b7a4
+	border-bottom: 4px solid #23b7a4
+	&:before
+		+coverdiv
+		content: ''
+		top: 3px
+		background: #23b7a4
+		height: 4px
+	+r(768)
+		display: block
+.header__menu-clone
+	display: none
+	width: 100%
+	position: absolute
+	left: 0
+	top: 55px
+	background: #fff
+	+rmin(768)
+		display: none !important
+
+
+
+				 
+
+
+
