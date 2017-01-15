@@ -1,2 +1,68 @@
-.first-creen
-	background: url("img/first-screen.png")
+.first-screen
+	background: url("../img/first-screen-bg-xs.jpg") no-repeat
+	background-size: cover
+	background-position: 50% 0
+	+rmin(1200)
+		background: url("../img/first-screen-bg.jpg") no-repeat
+	.slick-dots 
+		text-align: right
+		+r(786)
+			bottom: 10px
+		li 
+			button
+				&:before
+					background: transparent
+					border: 2px solid white
+					width: 15px
+					height: 15px
+			&.slick-active 
+				button
+					&:before
+						background: #fff
+h1
+	+hide-text
+.fs-slider__h2
+	margin-bottom: 19px
+	margin-top: 222px
+	margin-bottom: 18px
+	padding-left: 0
+	&:before, &:after
+		display: none
+	+r(1200)
+		margin-top: 0
+.fs-slider__desr
+	color: #ccd0d7
+	font: $main-text-style
+	max-width: 660px
+	width: 100%
+	margin-bottom: 36px
+	+r(768)
+		font: $main-text-style-mobile
+.fs-slider__item
+	min-height: 662px
+	+r(1200)
+		min-height: 300px
+		padding: 60px 0
+	+r(768)
+		min-height: 200px
+		padding: 30px 0 50px
+.fs-links-wrapper
+	+r(768)
+		text-align: center
+	.fs-slider__link
+		display: inline-block
+		border: 2px solid white
+		border-radius: 5px
+		color: white
+		font: 700 14px "Quattrocento Sans"
+		text-transform: uppercase
+		padding: 12px 23px
+		transition: all .4s
+		margin-right: 5px
+		+r(768)
+			margin: 0 
+			&:first-of-type()
+				margin-right: 10px
+		&:hover
+			background-color: #23b7a4
+			border: 2px solid #23b7a4

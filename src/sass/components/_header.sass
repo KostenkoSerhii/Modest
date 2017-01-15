@@ -47,7 +47,7 @@ header
 		text-transform: uppercase
 		font: 600 14px/18px sans-serif 
 		+r(768)
-			padding: 1em 10px
+			padding: 12px 10px
 		&:before
 			content: ''
 			+coverdiv
@@ -55,15 +55,11 @@ header
 			border-radius: 5px
 			transition: all .3s
 			opacity: 0
-			-webkit-transform: translate(-3px, 3px)
-			-moz-transform: translate(-3px, 3px)
 			transform: translate(-3px, 3px)
 		+rmin(1200)
 			&:hover 
 				&:before
 					opacity: 1
-					-webkit-transform: translate(0px, 0px)
-					-moz-transform: translate(0px, 0px)
 					transform: translate(0px, 0px)
 		+r(768)
 			&:before
@@ -74,8 +70,6 @@ header
 		&:before
 			border: 2px solid #23b7a4
 			opacity: 1
-			-webkit-transform: translate(0px, 0px)
-			-moz-transform: translate(0px, 0px)
 			transform: translate(0px, 0px)
 .header__menu-btn
 	position: absolute
@@ -99,8 +93,9 @@ header
 	width: 100%
 	position: absolute
 	left: 0
-	top: 55px
+	top: 54px
 	background: #fff
+	z-index: 22
 	+rmin(768)
 		display: none !important
 

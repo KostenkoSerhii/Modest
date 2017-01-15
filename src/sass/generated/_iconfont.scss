@@ -9,7 +9,14 @@
   font-style: normal;
 }
 
-$icon-facebook: "\EA01";
+$icon-D: "\EA01";
+$icon-I: "\EA02";
+$icon-e: "\EA03";
+$icon-f: "\EA04";
+$icon-facebook: "\EA05";
+$icon-g: "\EA06";
+$icon-skype: "\EA07";
+$icon-tw: "\EA08";
 
 
 %icon {
@@ -28,4 +35,11 @@ $icon-facebook: "\EA01";
   display: inline-block;
 }
 
+.icon-D:before { content: $icon-D; }
+.icon-I:before { content: $icon-I; }
+.icon-e:before { content: $icon-e; }
+.icon-f:before { content: $icon-f; }
 .icon-facebook:before { content: $icon-facebook; }
+.icon-g:before { content: $icon-g; }
+.icon-skype:before { content: $icon-skype; }
+.icon-tw:before { content: $icon-tw; }

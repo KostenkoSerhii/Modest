@@ -1,11 +1,41 @@
 $main-text-style: 400 16px/26px "Open Sans"
+$main-text-style-mobile: 400 14px/20px "Open Sans"
 $main-text-color: #8d8f92
 *
 	box-sizing: border-box
-h1, h2
+h2
 	color: white
-	font: 700 36px/42px "Quattrocento Sans"
+	font: 700 36px "Quattrocento Sans"
 	text-transform: uppercase
+	position: relative
+	padding-left: 24px
+	display: inline-block
+	letter-spacing: -2px
+	+r(992)
+		font: 700 28px "Quattrocento Sans"
+	+r(768)
+		font-size: 20px
+		display: block
+		text-align: center
+	&:before, &:after
+		transition: all .4s
+		content: ''
+		position: absolute
+		height: 35px
+		top: 50%
+		left: 0
+		width: 10px
+		transform: translateY(-50%)
+	&:before
+		background: #e1e6ea
+	+rmin(992)
+		&:after
+			height: 0
+			background: #23b7a4
+		&:hover
+			&:after
+				height: 35px
+
 a
 	text-decoration: none
 .cf:before, .cf:after 

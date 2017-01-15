@@ -9,6 +9,19 @@ sayHello();
 $(document).ready(function(){
 	/*begin ready*/
 
+	/*slick*/
+	$('.fs-slider').slick({
+		autoplay: true,
+		autoplaySpeed: 4000,
+		arrows : false,
+		dots: true,
+		draggable: false,
+		pauseOnHover: false
+	});
+	/*slick*/
+
+
+
 	$('.header__menu').each(function(index, el) {
 		$(el).find('.menu__item').click(function(event) {
 			$(this).addClass('menu__item-active');
@@ -27,7 +40,6 @@ $(document).ready(function(){
 	$(".header__menu-clone .menu__item").on("click", function(){
 		$(".header__menu-clone").slideUp();
 	});
-
 
 
 	/*end ready*/
