@@ -7,17 +7,8 @@ title: Modest
 
 	{% include "partials/_first-screen.html" %}
 	{% include "partials/_we-are-modest.html" %}
-
-	{# mixin example #}
-	{{mixins.icon('facebook')}}
-
-
-	{# data usage example #}
-		{% import "data/data.html" as tests %}
-		
-		{% for test in tests.list %}
-		<li>{{test.title}}</li>
-		{% endfor %}
-	{# end of example #}
+	{% include "partials/_our-team.html" %}
+	{% include "partials/_our-work.html" %}
+	{% include "partials/_what-we-do.html" %}
 
 {% endblock %}

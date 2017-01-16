@@ -1,8 +1,14 @@
 .we-modest
 	padding-top: 81px
+	padding-bottom: 100px
+	+r(768)
+		padding-top: 30px
+		padding-bottom: 40px
 .we-modest__h2
 	color: #292f36
 	margin-bottom: 50px
+	+r(768)
+		margin-bottom: 15px
 .modest-wrapper
 	display: -webkit-flex
 	display: -moz-flex
@@ -11,9 +17,19 @@
 	display: flex
 	font: $main-text-style
 	color: $main-text-color
+	+r(768)
+		font: $main-text-style-mobile
+		flex-wrap: wrap
 .left-col
 	flex-basis: 658px
 	flex-grow: 0
+	flex-shrink: 0
+	+r(1200)
+		flex-basis: 440px
+	+r(992)
+		flex-basis: 340px
+	+r(768)
+		flex-basis: 100%
 	p
 		margin-bottom: 25px
 		&:last-of-type
@@ -22,6 +38,10 @@
 		font-weight: 700
 .right-col
 	flex-grow: 1
+.social-wrapper
+	+r(768)
+		text-align: center
+		margin-bottom: 25px
 a.modest-social
 	float: left
 	width: 60px
@@ -30,9 +50,63 @@ a.modest-social
 	transition: all .3s
 	position: relative
 	margin-right: 1px
+	+r(768)
+		width: 45px
+		height: 45px
+		float: none
+		display: inline-block
+		margin-right: 5px
 	&:last-of-type
 		margin-right: 0
 	.icon
 		+vcenter
 	&:hover
 		background: #d0d5d9
+.we-modest__list
+	padding-left: 90px
+	+r(768)
+		padding-left: 50px
+	.list__item
+		position: relative
+		&:nth-of-type(2)
+			margin-bottom: 30px
+		+r(768)
+			margin-bottom: 20px
+			&:nth-of-type(2)
+				margin-bottom: 20px
+		&:before
+			content: ''
+			position: absolute
+			left: -66px
+			top: 31px
+			transform: translateY(-50%)
+			width: 50px
+			height: 50px
+			background: #23b7a4
+			text-align: center
+			color: #fff
+			font: 700 20px/50px "Quattrocento Sans"
+			text-transform: uppercase
+			+r(768)
+				left: -45px
+				top: 23px
+				width: 40px
+				height: 40px
+				line-height: 40px
+		&:nth-of-type(1)
+			&:before
+				content: '01'
+		&:nth-of-type(2)
+			&:before
+				content: '02'
+		&:nth-of-type(3)
+			&:before
+				content: '03'
+	span
+		color: #292f36
+		font: 700 20px/32px "Quattrocento Sans"
+		text-transform: uppercase
+		letter-spacing: -2px
+		+r(768)
+			font-size: 16px
+			line-height: 24px

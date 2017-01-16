@@ -1,0 +1,25 @@
+		<!--begin our-work-->
+		<div class="our-work">
+			<!--begin container-->
+			<div class="container">
+				<h2 class="our-work__h2">lovely work.</h2>
+				<div class="our-work__gallery gallery">
+					{% import "data/data.html" as tests %}
+					{% for test in tests.list2 %}
+					<div class="gallery__item">
+						<a href="{{test.img}}">
+							<img src="{{test.img}}" alt="{{test.alt}}">
+						</a>
+						<p>{{test.desc}}</p>
+					</div>
+					{% endfor %}
+				</div>
+				<a class="more-galery" href="#">
+					show me more
+				</a>
+			</div>
+			<!--end container-->
+
+		</div>
+		<!--end our-work-->
+		

@@ -1,0 +1,88 @@
+.our-work__h2
+	letter-spacing: -3px
+	margin-bottom: 55px
+.our-work
+	padding-top: 78px
+	background: #3a454d
+	padding-bottom: 128px
+	+r(768)
+		padding-top: 30px
+		padding-bottom: 80px
+.our-work__gallery
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	+r(768)
+		justify-content: center
+	.gallery__item
+		position: relative
+		flex-basis: 360px
+		margin-left: auto
+		flex-grow: 0
+		flex-shrink: 0
+		font: 700 17px "Quattrocento Sans"
+		color: #fff
+		text-transform: uppercase
+		margin-bottom: 30px
+		overflow: hidden
+		+rmin(1200)
+			&:hover
+				a
+					&:before
+						opacity: 1
+				p
+					bottom: 0
+		+r(1200)
+			flex-basis: 300px
+		+r(768)
+			margin: 0 5px 30px
+		a
+			display: block
+			position: relative
+			z-index: 1
+			&:before
+				transition: all .4s
+				opacity: 0
+				content: '+'
+				+vcenter
+				color: #fff
+				top: 35%
+				font-size: 50px
+				font-weight: 700
+				z-index: 2
+		img
+			width: 360px
+			height: 265px
+
+		p
+			transition: all .4s
+			width: 100%
+			position: absolute
+			bottom: 0
+			left: 0
+			background: #292f36
+			padding: 23px 18px
+			z-index: 2
+			+rmin(1200)
+				bottom: -100px			
+.more-galery
+	color: white
+	font: 700 14px "Quattrocento Sans"
+	text-transform: uppercase
+	display: inline-block
+	padding: 12px	20px
+	border: 2px solid white
+	border-radius: 5px
+	margin: 0	auto
+	transition: all .4s
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
+	bottom: -67px
+	&:hover
+		color: #23b7a4
+		border-color: #23b7a4

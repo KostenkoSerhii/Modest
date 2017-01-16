@@ -3,6 +3,7 @@
 //=include lib/jquery.min.js
 //=include lib/slick.min.js
 //=include lib/svgxuse.min.js
+//=include lib/jquery.magnific-popup.min.js
 
 sayHello();
 
@@ -41,6 +42,22 @@ $(document).ready(function(){
 		$(".header__menu-clone").slideUp();
 	});
 
+	/*begin galery*/
+
+		$(".gallery__item a").magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		image: {
+			verticalFit: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300
+		}
+	});
+
+
+	/*end galery*/
 
 	/*end ready*/
 });

@@ -1,0 +1,110 @@
+.our-team__h2
+	color: #292f36
+	margin-bottom: 55px
+.our-team
+	padding-top: 80px
+	padding-bottom: 30px
+	border-top: 1px solid #dde1e4
+	+r(768)
+		padding-top: 30px
+	.item-links
+		position: absolute
+.team-list
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	justify-content: space-around
+.team__desc	
+	background: #e1e6ea
+	padding: 14px 16px
+	transition: all .4s
+	position: relative
+	z-index: 1
+	+rmin(1200)
+		&:before
+			+coverdiv
+			content: ''
+			background: #3a454d
+			width: 0
+			z-index: -1 
+			transition: all .3s
+	.desc__name
+		color: #292f36
+		font: 700 16px/26px "Quattrocento Sans"
+		text-transform: uppercase
+	.desc__spec
+		font: 400 14px/17px "Open Sans"
+		color: $main-text-color
+.item-links
+	position: absolute
+	width: 100%
+	text-align: center
+	z-index: 3
+	bottom: -60px
+	transition: all .4s
+	+rmin(1200)
+		top: 126px
+		opacity: 0
+	a
+		display: inline-block
+		width: 50px
+		height: 50px
+		background: #3a454d
+		position: relative
+		margin-right: 0px
+		transition: all .4s
+		&:last-of-type
+			margin-right: 0
+		&:hover
+			background: #4e5a62
+		+rmin(1200)
+			margin-right: -3px
+	.icon
+		z-index: 2
+		+vcenter
+.team__photo
+	height: 240px
+	position: relative
+	z-index: 1
+	+rmin(1200)
+		height: 299px
+		&:before
+			transition: all .4s
+			content: ''
+			+coverdiv
+			background: #fff
+			opacity: 0
+			z-index: 2
+.team__item
+	flex-basis: 263px
+	flex-grow: 0
+	height: 375px
+	transition: all .4s
+	position: relative
+	margin-bottom: 70px
+	+rmin(1200)
+		&:hover
+			.team__desc	
+				&:before
+					width: 100%
+			.desc__name, .desc__spec
+				color: #fff
+			.team__photo
+				&:before
+					opacity: 0.4
+			.item-links
+				opacity: 1
+	+r(1200)
+		width: 80%
+		height: 80%
+	+r(768)
+		margin: 0 5px 70px
+	img
+		max-width: 263px
+		max-height: 299px
+		height: 100%
+		width: 100%

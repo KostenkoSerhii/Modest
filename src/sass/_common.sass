@@ -17,6 +17,7 @@ h2
 		font-size: 20px
 		display: block
 		text-align: center
+		padding-left: 0
 	&:before, &:after
 		transition: all .4s
 		content: ''
@@ -26,6 +27,8 @@ h2
 		left: 0
 		width: 10px
 		transform: translateY(-50%)
+		+r(768)
+			display: none
 	&:before
 		background: #e1e6ea
 	+rmin(992)
@@ -35,7 +38,6 @@ h2
 		&:hover
 			&:after
 				height: 35px
-
 a
 	text-decoration: none
 .cf:before, .cf:after 
