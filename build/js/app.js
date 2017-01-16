@@ -3173,6 +3173,58 @@ $(document).ready(function () {
 	$(".more-galery");
 	/*end galery*/
 
+	/*send email */
+	$('form').submit(function (e) {
+		e.preventDefault();
+		var name = $(this).find("input[name=name]").val();
+		var email = $(this).find("input[name=email]").val();
+		var message = $(this).find("textarea[name=message]").val();
+		var status = 1;
+
+		if (isValidEmailAddress(email)) {
+			$("form input[name=email]").removeClass('error_form');
+			$("form input[name=email]").addClass('valid_form');
+		} else {
+			$("form input[name=email]").addClass('error_form');
+			$("form input[name=email]").removeClass('valid_form');
+			status = 0;
+		}
+		if (name != '') {
+			$("form input[name=name]").addClass('valid_form');
+			$("form input[name=name]").removeClass('error_form');
+		} else {
+			$("form input[name=name]").addClass('error_form');
+			$("form input[name=name]").removeClass('valid_form');
+			status = 0;
+		}
+		if (message != '') {
+			$("form textarea[name=message]").addClass('valid_form');
+			$("form textarea[name=message]").removeClass('error_form');
+		} else {
+			$("form textarea[name=message]").addClass('error_form');
+			$("form textarea[name=message]").removeClass('valid_form');
+			status = 0;
+		}
+
+		if (status == 1) {
+			$.ajax({
+				url: 'mail.php',
+				type: 'POST',
+				data: $(this).serialize()
+			}).done(function () {
+				/*$(this).find("input").val("");*/
+				$("form").trigger("reset");
+				$("form input").removeClass('valid_form');
+			});
+		}
+	});
+
+	function isValidEmailAddress(emailAddress) {
+		var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+		return pattern.test(emailAddress);
+	};
+	/*send email */
+
 	/*end ready*/
 });
 

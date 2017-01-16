@@ -264,6 +264,14 @@ a {
   zoom: 1;
 }
 
+.valid_form {
+  box-shadow: 0px 0px 10px 2px green inset;
+}
+
+.error_form {
+  box-shadow: 0px 0px 10px 2px red inset;
+}
+
 .container {
   padding: 0 15px;
   position: relative;
@@ -1144,6 +1152,8 @@ a.modest-social .icon {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  height: 1.3em;
+  width: 1.3em;
 }
 
 a.modest-social:hover {
@@ -1542,23 +1552,12 @@ a.modest-social:hover {
 
 .contacts {
   padding-top: 64px;
+  padding-bottom: 97px;
 }
 
 .map {
   width: 100%;
   height: 350px;
-}
-
-.after-map-container {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .after-map-container p {
@@ -1578,15 +1577,7 @@ a.modest-social:hover {
 }
 
 .after-map-container .text-block {
-  -webkit-flex-basis: 570px;
-  -ms-flex-preferred-size: 570px;
-  flex-basis: 570px;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
+  width: 550px;
   padding-top: 54px;
 }
 
@@ -1600,29 +1591,110 @@ a.modest-social:hover {
 }
 
 .callback-form {
+  position: absolute;
+  right: 15px;
+  top: -132px;
   display: block;
-  position: relative;
-  -webkit-flex-basis: 555px;
-  -ms-flex-preferred-size: 555px;
-  flex-basis: 555px;
-  padding: 20px 30px;
+  width: 555px;
+  padding: 28px 30px;
   background: #fff;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
   color: #8d8f92;
   font: 700 14px "Quattrocento Sans";
   text-transform: uppercase;
 }
 
+.callback-form span {
+  display: block;
+  padding-left: 6px;
+  margin-bottom: 5px;
+}
+
+.callback-form .input-wrapper {
+  display: inline-block;
+  width: 240px;
+}
+
+.callback-form .input-wrapper:first-of-type {
+  margin-right: 10px;
+}
+
+.callback-form input, .callback-form textarea {
+  font: 400 16px/26px "Open Sans";
+  color: #000;
+  padding: 10px 15px;
+  background: #eaeef1;
+  border-radius: 3px;
+  border: 1px solid #eaeef1;
+  transition: all .4s;
+}
+
+.callback-form input:focus, .callback-form textarea:focus {
+  border: 1px solid #23b7a4;
+}
+
+.callback-form input {
+  width: 100%;
+}
+
+.callback-form textarea {
+  display: block;
+  width: 100%;
+  resize: none;
+  height: 160px;
+}
+
+.callback-form .textarea-wrapper {
+  margin-top: 27px;
+  margin-bottom: 30px;
+}
+
 .callback-button {
+  padding: 12px 15px;
+  width: 152px;
   color: #fff;
   background: #23b7a4;
   border: 2px solid #23b7a4;
-  border-radius: 5px;
+  border-radius: 3px;
+  display: inline-block;
+  font: 700 14px "Quattrocento Sans";
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+footer {
+  background: #3a454d;
+  color: #8d8f92;
+  font: 400 14px "Open Sans";
+  padding-top: 39px;
+  padding-bottom: 39px;
+}
+
+footer p {
+  float: left;
+}
+
+.footer-socials {
+  float: right;
+}
+
+.footer-socials a {
+  display: inline-block;
+  margin-right: 13px;
+  vertical-align: top;
+}
+
+.footer-socials a:last-of-type {
+  margin-right: 0;
+}
+
+.footer-socials a .icon {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.footer-socials a .icon-e {
+  width: 1.4em;
+  height: 1.4em;
 }
 
 @media only screen and (min-width: 768px){
@@ -1715,6 +1787,28 @@ a.modest-social:hover {
   .our-work__gallery .gallery__item p{
     bottom: -100px;
   }
+  .callback-button{
+    transition: all .4s;
+    position: relative;
+  }
+  .callback-button:before{
+    transition: all .4s;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    width: 0;
+    background: #fff;
+    z-index: -1;
+  }
+  .callback-button:hover{
+    color: #23b7a4;
+  }
+  .callback-button:hover:before{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px){
@@ -1797,6 +1891,15 @@ a.modest-social:hover {
   .features__item img{
     max-height: 190px;
   }
+  .after-map-container .text-block{
+    width: 450px;
+  }
+  .callback-form{
+    width: 500px;
+  }
+  .callback-form .input-wrapper{
+    width: 205px;
+  }
 }
 
 @media only screen and (max-width: 992px){
@@ -1810,6 +1913,15 @@ a.modest-social:hover {
     -webkit-flex-basis: 340px;
     -ms-flex-preferred-size: 340px;
     flex-basis: 340px;
+  }
+  .after-map-container .text-block{
+    width: 365px;
+  }
+  .callback-form{
+    width: 350px;
+  }
+  .callback-form .input-wrapper{
+    width: 100%;
   }
 }
 
@@ -1841,6 +1953,7 @@ a.modest-social:hover {
   }
   .contacts{
     padding-top: 30px;
+    padding-bottom: 40px;
   }
 }
 
@@ -1993,6 +2106,34 @@ a.modest-social:hover {
   }
   .after-map-container p{
     font: 400 14px/20px "Open Sans";
+  }
+  .after-map-container .text-block{
+    width: 100%;
+    padding-top: 24px;
+  }
+  .callback-form{
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 15px 0;
+    width: 100%;
+  }
+  .callback-form input{
+    margin-bottom: 10px;
+  }
+  footer{
+    padding: 20px 0;
+    text-align: center;
+  }
+  footer p{
+    float: none;
+  }
+  .footer-socials{
+    float: none;
+    margin-top: 20px;
+  }
+  .footer-socials a{
+    margin-right: 20px;
   }
 }
 

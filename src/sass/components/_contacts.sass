@@ -7,19 +7,14 @@
 		margin-bottom: 20px
 .contacts
 	padding-top: 64px
-
+	padding-bottom: 97px
 	+r(786)
 		padding-top: 30px
+		padding-bottom: 40px
 .map
 	width: 100%
 	height: 350px
 .after-map-container
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flex
-	display: -o-flex
-	display: flex
-	justify-content: space-between
 	p
 		font: $main-text-style
 		color: $main-text-color
@@ -33,11 +28,15 @@
 		+r(768)
 			font: $main-text-style-mobile
 	.text-block
-		flex-basis: 570px
-		flex-grow: 0
-		flex-shrink: 0
+		width: 550px
 		padding-top: 54px
-
+		+r(1200)
+			width: 450px
+		+r(992)
+			width: 365px
+		+r(768)
+			width: 100%
+			padding-top: 24px
 		&>span
 			color: #292f36
 			font: 700 20px "Quattrocento Sans"
@@ -46,18 +45,83 @@
 			margin-bottom: 28px
 			letter-spacing: -1px
 .callback-form
+	position: absolute
+	right: 15px
+	top: -132px
 	display: block
-	position: relative
-	flex-basis: 555px
-	padding: 20px 30px
+	width: 555px
+	padding: 28px 30px
 	background: #fff
-	flex-grow: 0
-	flex-shrink: 0
 	color: #8d8f92
 	font: 700 14px "Quattrocento Sans"
 	text-transform: uppercase
+	+r(1200)
+		width: 500px
+	+r(992)
+		width: 350px
+	+r(768)
+		position: relative
+		top: 0
+		right: 0
+		padding: 15px 0
+		width: 100%
+	span
+		display: block
+		padding-left: 6px
+		margin-bottom: 5px
+	.input-wrapper
+		display: inline-block
+		width: 240px
+		+r(1200)
+			width: 205px
+		+r(992)
+			width: 100%
+		&:first-of-type
+			margin-right: 10px
+	input, textarea
+		font: $main-text-style
+		color: #000
+		padding: 10px 15px
+		background: #eaeef1
+		border-radius: 3px
+		border: 1px solid #eaeef1
+		transition: all .4s
+		&:focus
+			border: 1px solid #23b7a4
+	input
+			width: 100%
+			+r(768)
+				margin-bottom: 10px
+	textarea
+		display: block
+		width: 100%
+		resize: none
+		height: 160px
+	.textarea-wrapper
+		margin-top: 27px
+		margin-bottom: 30px
 .callback-button
+	padding: 12px 15px
+	width: 152px
 	color: #fff
 	background: #23b7a4
 	border: 2px solid #23b7a4
-	border-radius: 5px
+	border-radius: 3px
+	display: inline-block
+	font: 700 14px "Quattrocento Sans"
+	text-transform: uppercase
+	z-index: 2
+	+rmin(1200)
+		transition: all .4s
+		position: relative
+		&:before
+			transition: all .4s
+			content: ''
+			+coverdiv
+			width: 0
+			background: #fff
+			z-index: -1
+		&:hover
+			color: #23b7a4
+			&:before
+				width: 100%
