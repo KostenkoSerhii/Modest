@@ -1,0 +1,24 @@
+		<!--begin services-->
+		<div class="services">
+			<!--begin container-->
+			<div class="container">
+				<h2 class="services__h2">
+					what we do.
+				</h2>
+				<!--begin -->
+				<div class="services__list work-list" >
+					{% import "data/data.html" as tests %}
+					{% for test in tests.list3 %}
+					<div class="work-list__item">
+						{{mixins.icon('services1')}}
+						<span>{{test.shortdesc}}</span>
+						<p>{{test.desc}}</p>
+					</div>
+					{% endfor %}
+				</div>
+				<!--end -->
+			</div>
+			<!--end container-->
+		</div>
+		<!--end services-->
+		

@@ -15,8 +15,12 @@ $icon-e: "\EA03";
 $icon-f: "\EA04";
 $icon-facebook: "\EA05";
 $icon-g: "\EA06";
-$icon-skype: "\EA07";
-$icon-tw: "\EA08";
+$icon-services1: "\EA07";
+$icon-services2: "\EA08";
+$icon-services3: "\EA09";
+$icon-services4: "\EA0A";
+$icon-skype: "\EA0B";
+$icon-tw: "\EA0C";
 
 
 %icon {
@@ -41,5 +45,9 @@ $icon-tw: "\EA08";
 .icon-f:before { content: $icon-f; }
 .icon-facebook:before { content: $icon-facebook; }
 .icon-g:before { content: $icon-g; }
+.icon-services1:before { content: $icon-services1; }
+.icon-services2:before { content: $icon-services2; }
+.icon-services3:before { content: $icon-services3; }
+.icon-services4:before { content: $icon-services4; }
 .icon-skype:before { content: $icon-skype; }
 .icon-tw:before { content: $icon-tw; }

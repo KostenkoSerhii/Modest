@@ -3158,7 +3158,6 @@ $(document).ready(function () {
 	});
 
 	/*begin galery*/
-
 	$(".gallery__item a").magnificPopup({
 		type: 'image',
 		closeOnContentClick: true,
@@ -3171,7 +3170,19 @@ $(document).ready(function () {
 		}
 	});
 
+	$(".more-galery");
 	/*end galery*/
 
 	/*end ready*/
 });
+
+/*begin map*/
+var map;
+var initMap = function initMap() {
+	map = new google.maps.Map(document.getElementById('map'), {
+		center: { lat: 55.524963, lng: 37.478325 },
+		zoom: 15,
+		scrollwheel: false
+	});
+};
+/*end map*/

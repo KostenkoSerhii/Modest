@@ -120,12 +120,28 @@ html {
   content: "";
 }
 
-.icon-skype:before {
+.icon-services1:before {
   content: "";
 }
 
-.icon-tw:before {
+.icon-services2:before {
   content: "";
+}
+
+.icon-services3:before {
+  content: "";
+}
+
+.icon-services4:before {
+  content: "";
+}
+
+.icon-skype:before {
+  content: "";
+}
+
+.icon-tw:before {
+  content: "";
 }
 
 .icon-D {
@@ -162,6 +178,30 @@ html {
   width: 0.9em;
   height: 1em;
   fill: #FFF;
+}
+
+.icon-services1 {
+  width: 1em;
+  height: 1em;
+  fill: initial;
+}
+
+.icon-services2 {
+  width: 1em;
+  height: 1em;
+  fill: initial;
+}
+
+.icon-services3 {
+  width: 0.63em;
+  height: 1em;
+  fill: initial;
+}
+
+.icon-services4 {
+  width: 1em;
+  height: 1em;
+  fill: initial;
 }
 
 .icon-skype {
@@ -1380,6 +1420,211 @@ a.modest-social:hover {
   border-color: #23b7a4;
 }
 
+.services__h2 {
+  color: #292f36;
+  letter-spacing: -3px;
+  margin-bottom: 84px;
+}
+
+.services {
+  padding-top: 78px;
+  padding-bottom: 70px;
+}
+
+.work-list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.work-list__item {
+  text-align: center;
+  color: #8d8f92;
+  font: 400 16px/26px "Open Sans";
+  -webkit-flex-basis: 263px;
+  -ms-flex-preferred-size: 263px;
+  flex-basis: 263px;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  margin-bottom: 62px;
+}
+
+.work-list__item span {
+  display: block;
+  color: #292f36;
+  font: 700 17px "Quattrocento Sans";
+  text-transform: uppercase;
+  margin-top: 26px;
+  margin-bottom: 20px;
+  word-spacing: -2px;
+}
+
+.work-list__item .icon {
+  height: 3em;
+  width: 3em;
+}
+
+.features {
+  padding-top: 85px;
+  padding-bottom: 117px;
+  background: #3a454d;
+}
+
+.features__h2 {
+  letter-spacing: 0px;
+  margin-bottom: 55px;
+}
+
+.features-list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.features__item {
+  font: 400 16px/26px "Open Sans";
+  color: #8d8f92;
+  -webkit-flex-basis: 360px;
+  -ms-flex-preferred-size: 360px;
+  flex-basis: 360px;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.features__item img {
+  max-width: 360px;
+  max-height: 240px;
+  width: 100%;
+  height: 100%;
+}
+
+.features__item span {
+  display: block;
+  margin-top: 46px;
+  margin-bottom: 18px;
+  font: 700 18px "Quattrocento Sans";
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.contacts__h2 {
+  color: #292f36;
+  word-spacing: -7px;
+  letter-spacing: 1px;
+  margin-bottom: 55px;
+}
+
+.contacts {
+  padding-top: 64px;
+}
+
+.map {
+  width: 100%;
+  height: 350px;
+}
+
+.after-map-container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.after-map-container p {
+  font: 400 16px/26px "Open Sans";
+  color: #8d8f92;
+  word-spacing: 6px;
+  letter-spacing: -1px;
+  margin-bottom: 26px;
+}
+
+.after-map-container p:last-of-type {
+  margin-bottom: 0;
+}
+
+.after-map-container p span {
+  font-weight: 700;
+}
+
+.after-map-container .text-block {
+  -webkit-flex-basis: 570px;
+  -ms-flex-preferred-size: 570px;
+  flex-basis: 570px;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding-top: 54px;
+}
+
+.after-map-container .text-block > span {
+  color: #292f36;
+  font: 700 20px "Quattrocento Sans";
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 28px;
+  letter-spacing: -1px;
+}
+
+.callback-form {
+  display: block;
+  position: relative;
+  -webkit-flex-basis: 555px;
+  -ms-flex-preferred-size: 555px;
+  flex-basis: 555px;
+  padding: 20px 30px;
+  background: #fff;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  color: #8d8f92;
+  font: 700 14px "Quattrocento Sans";
+  text-transform: uppercase;
+}
+
+.callback-button {
+  color: #fff;
+  background: #23b7a4;
+  border: 2px solid #23b7a4;
+  border-radius: 5px;
+}
+
 @media only screen and (min-width: 768px){
   .container{
     width: 750px;
@@ -1543,6 +1788,15 @@ a.modest-social:hover {
     -ms-flex-preferred-size: 300px;
     flex-basis: 300px;
   }
+  .features__item{
+    margin-bottom: 20px;
+    -webkit-flex-basis: 280px;
+    -ms-flex-preferred-size: 280px;
+    flex-basis: 280px;
+  }
+  .features__item img{
+    max-height: 190px;
+  }
 }
 
 @media only screen and (max-width: 992px){
@@ -1584,6 +1838,9 @@ a.modest-social:hover {
 @media only screen and (max-width: 786px){
   .first-screen .slick-dots{
     bottom: 10px;
+  }
+  .contacts{
+    padding-top: 30px;
   }
 }
 
@@ -1696,6 +1953,46 @@ a.modest-social:hover {
   }
   .our-work__gallery .gallery__item{
     margin: 0 5px 30px;
+  }
+  .services__h2{
+    margin-bottom: 30px;
+    letter-spacing: 0;
+  }
+  .services{
+    padding-top: 30px;
+    padding-bottom: 35px;
+  }
+  .work-list{
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .work-list__item{
+    font: 400 14px/20px "Open Sans";
+    margin: 0 5px 40px;
+  }
+  .features{
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  .features-list{
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .features__item{
+    font: 400 14px/20px "Open Sans";
+    margin: 0 5px 20px;
+  }
+  .features__item span{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .contacts__h2{
+    margin-bottom: 20px;
+  }
+  .after-map-container p{
+    font: 400 14px/20px "Open Sans";
   }
 }
 
