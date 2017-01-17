@@ -3169,6 +3169,7 @@ function sayHello() {
 			var d = this.get(a);if (a.options.interrupt && a._last && a._last !== d) return $(a.elem).stop();var b = Math.round(a.now);d !== b && ($(a.elem)[a.prop](b), a._last = this.get(a));
 		} };return p;
 });
+
 sayHello();
 
 $(document).ready(function () {
@@ -3301,6 +3302,15 @@ $(document).ready(function () {
 	});
 	/*end popup galery*/
 
+	/*begin greensock*/
+	/*	$(".list__item").hover(function(){
+ 		var itemNumber	=	$(this).children(".item-number");
+ 		TweenMax.to(itemNumber, 1, {width: 70});
+ 	},function(){
+ 		TweenMax.to(itemNumber, 1, {width: 50});
+ 	});*/
+
+	/*end greensock*/
 	/*end ready*/
 });
 

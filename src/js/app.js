@@ -5,6 +5,7 @@
 //=include lib/svgxuse.min.js
 //=include lib/jquery.magnific-popup.min.js
 //=include lib/scrollto.min.js
+
 sayHello();
 
 $(document).ready(function(){
@@ -142,6 +143,15 @@ $(document).ready(function(){
 	});
 	/*end popup galery*/
 
+	/*begin greensock*/
+/*	$(".list__item").hover(function(){
+		var itemNumber	=	$(this).children(".item-number");
+		TweenMax.to(itemNumber, 1, {width: 70});
+	},function(){
+		TweenMax.to(itemNumber, 1, {width: 50});
+	});*/
+
+	/*end greensock*/
 	/*end ready*/
 });
 
