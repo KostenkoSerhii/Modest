@@ -2065,6 +2065,9 @@ footer p {
   .our-work__gallery .gallery__item{
     margin: 0 5px 30px;
   }
+  .more-galery{
+    bottom: -46px;
+  }
   .services__h2{
     margin-bottom: 30px;
     letter-spacing: 0;
