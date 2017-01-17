@@ -4,6 +4,7 @@
 	background-position: 50% 0
 	+rmin(1200)
 		background: url("../img/first-screen-bg.jpg") no-repeat
+		background-size: cover
 	.slick-dots 
 		text-align: right
 		+r(786)
@@ -57,12 +58,23 @@ h1
 		font: 700 14px "Quattrocento Sans"
 		text-transform: uppercase
 		padding: 12px 23px
-		transition: all .4s
 		margin-right: 5px
+		z-index: 2
+		+rmin(1200)
+			transition: all .4s
+			position: relative
+			&:before
+				transition: all .4s
+				content: ''
+				+coverdiv
+				width: 0
+				background: #23b7a4
+				z-index: -1
+			&:hover
+				border: 2px solid #23b7a4
+				&:before
+					width: 100%
 		+r(768)
 			margin: 0 
-			&:first-of-type()
+			&:first-of-type
 				margin-right: 10px
-		&:hover
-			background-color: #23b7a4
-			border: 2px solid #23b7a4

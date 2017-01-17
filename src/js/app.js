@@ -4,11 +4,26 @@
 //=include lib/slick.min.js
 //=include lib/svgxuse.min.js
 //=include lib/jquery.magnific-popup.min.js
-
+//=include lib/scrollto.min.js
 sayHello();
 
 $(document).ready(function(){
 	/*begin ready*/
+
+	/*begin menu scroll*/
+	$(document).ready(function(){
+
+		var $menu = $(".wrapper-scroll");
+
+		$(window).scroll(function(){
+			if ( $(this).scrollTop() > 80 && $menu.hasClass("default") ){
+				$menu.removeClass("default").addClass("wrapper-fixed");
+			} else if($(this).scrollTop() <= 80 && $menu.hasClass("wrapper-fixed")) {
+				$menu.removeClass("wrapper-fixed").addClass("default");
+			}
+        });
+	});
+	/*end menu scroll*/
 
 	/*slick*/
 	$('.fs-slider').slick({
@@ -21,14 +36,13 @@ $(document).ready(function(){
 	});
 	/*slick*/
 
-
-
-	$('.header__menu').each(function(index, el) {
-		$(el).find('.menu__item').click(function(event) {
-			$(this).addClass('menu__item-active');
-			$(".menu__item").not(this).removeClass("menu__item-active");
-		});
+	$('.menu__item').on("click", function(){
+		$(this).addClass('menu__item-active');
+		$(".menu__item").not(this).removeClass("menu__item-active");
+		var a=$(this).children("a").attr("href");
+		return $.scrollTo(a,500),!1
 	});
+
 
 	var cloneMenu = $(".header__menu").clone(true);
 	cloneMenu.attr("class", "header__menu-clone");
@@ -122,8 +136,8 @@ $(document).ready(function(){
 var map;
 var initMap =  function () {
 	map = new google.maps.Map(document.getElementById('map'), {
-		center: {lat: 55.524963, lng: 37.478325},
-		zoom: 15,
+		center: {lat: 23.022505, lng: 72.5713621},
+		zoom: 12,
 		scrollwheel: false
 	});
 
