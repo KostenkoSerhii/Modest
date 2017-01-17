@@ -51,29 +51,8 @@ h1
 	+r(768)
 		text-align: center
 	.fs-slider__link
-		display: inline-block
-		border: 2px solid white
-		border-radius: 5px
-		color: white
-		font: 700 14px "Quattrocento Sans"
-		text-transform: uppercase
 		padding: 12px 23px
 		margin-right: 5px
-		z-index: 2
-		+rmin(1200)
-			transition: all .4s
-			position: relative
-			&:before
-				transition: all .4s
-				content: ''
-				+coverdiv
-				width: 0
-				background: #23b7a4
-				z-index: -1
-			&:hover
-				border: 2px solid #23b7a4
-				&:before
-					width: 100%
 		+r(768)
 			margin: 0 
 			&:first-of-type

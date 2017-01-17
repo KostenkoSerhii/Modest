@@ -272,6 +272,17 @@ a {
   box-shadow: 0px 0px 10px 2px red inset;
 }
 
+.default-button {
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  font: 700 14px "Quattrocento Sans";
+  text-transform: uppercase;
+  margin-right: 5px;
+  z-index: 2;
+}
+
 .container {
   padding: 0 15px;
   position: relative;
@@ -1068,15 +1079,8 @@ h1 {
 }
 
 .fs-links-wrapper .fs-slider__link {
-  display: inline-block;
-  border: 2px solid white;
-  border-radius: 5px;
-  color: white;
-  font: 700 14px "Quattrocento Sans";
-  text-transform: uppercase;
   padding: 12px 23px;
   margin-right: 5px;
-  z-index: 2;
 }
 
 .we-modest {
@@ -1407,26 +1411,13 @@ a.modest-social:hover {
 }
 
 .more-galery {
-  color: white;
-  font: 700 14px "Quattrocento Sans";
-  text-transform: uppercase;
-  display: inline-block;
   padding: 12px	20px;
-  border: 2px solid white;
-  border-radius: 5px;
-  margin: 0	auto;
-  transition: all .4s;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   bottom: -67px;
-}
-
-.more-galery:hover {
-  color: #23b7a4;
-  border-color: #23b7a4;
 }
 
 .services__h2 {
@@ -1649,14 +1640,9 @@ a.modest-social:hover {
 
 .callback-button {
   padding: 12px 23px;
-  color: #fff;
   background: #23b7a4;
   border: 2px solid #23b7a4;
   border-radius: 3px;
-  display: inline-block;
-  font: 700 14px "Quattrocento Sans";
-  text-transform: uppercase;
-  z-index: 2;
 }
 
 footer {
@@ -1718,6 +1704,28 @@ footer p {
 }
 
 @media only screen and (min-width: 1200px){
+  .default-button{
+    transition: all .4s;
+    position: relative;
+  }
+  .default-button:before{
+    transition: all .4s;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    width: 0;
+    background: #23b7a4;
+    z-index: -1;
+  }
+  .default-button:hover{
+    border: 2px solid #23b7a4;
+  }
+  .default-button:hover:before{
+    width: 100%;
+  }
   .container{
     width: 1170px;
   }
@@ -1742,28 +1750,6 @@ footer p {
   .first-screen{
     background: url("../img/first-screen-bg.jpg") no-repeat;
     background-size: cover;
-  }
-  .fs-links-wrapper .fs-slider__link{
-    transition: all .4s;
-    position: relative;
-  }
-  .fs-links-wrapper .fs-slider__link:before{
-    transition: all .4s;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    width: 0;
-    background: #23b7a4;
-    z-index: -1;
-  }
-  .fs-links-wrapper .fs-slider__link:hover{
-    border: 2px solid #23b7a4;
-  }
-  .fs-links-wrapper .fs-slider__link:hover:before{
-    width: 100%;
   }
   .team__desc:before{
     position: absolute;
@@ -1820,21 +1806,8 @@ footer p {
   .our-work__gallery .gallery__item p{
     bottom: -100px;
   }
-  .callback-button{
-    transition: all .4s;
-    position: relative;
-  }
   .callback-button:before{
-    transition: all .4s;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    width: 0;
     background: #fff;
-    z-index: -1;
   }
   .callback-button:hover{
     color: #23b7a4;

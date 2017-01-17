@@ -53,3 +53,26 @@ a
 
 .error_form
 	box-shadow: 0px 0px 10px 2px red inset
+.default-button
+	display: inline-block
+	border: 2px solid white
+	border-radius: 5px
+	color: white
+	font: 700 14px "Quattrocento Sans"
+	text-transform: uppercase
+	margin-right: 5px
+	z-index: 2
+	+rmin(1200)
+		transition: all .4s
+		position: relative
+		&:before
+			transition: all .4s
+			content: ''
+			+coverdiv
+			width: 0
+			background: #23b7a4
+			z-index: -1
+		&:hover
+			border: 2px solid #23b7a4
+			&:before
+				width: 100%
