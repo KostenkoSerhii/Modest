@@ -1095,9 +1095,6 @@ h1 {
 
 .modest-wrapper {
   display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: -ms-flexbox;
   display: flex;
   font: 400 16px/26px "Open Sans";
@@ -1228,9 +1225,6 @@ a.modest-social:hover {
 
 .team-list {
   display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-justify-content: center;
@@ -1339,9 +1333,6 @@ a.modest-social:hover {
 
 .our-work__gallery {
   display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-justify-content: space-between;
@@ -1433,9 +1424,6 @@ a.modest-social:hover {
 
 .work-list {
   display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-justify-content: space-between;
@@ -1490,9 +1478,6 @@ a.modest-social:hover {
 
 .features-list {
   display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-justify-content: space-between;
@@ -1665,6 +1650,13 @@ footer p {
   display: inline-block;
   margin-right: 13px;
   vertical-align: top;
+  position: relative;
+  transition: all .3s;
+  top: 0;
+}
+
+.footer-socials a:hover {
+  top: -2px;
 }
 
 .footer-socials a:last-of-type {
