@@ -1270,7 +1270,10 @@ a.modest-social:hover {
 }
 
 .item-links .icon {
+  transition: all .3s;
   z-index: 2;
+  width: 1.1em;
+  height: 1.1em;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1313,7 +1316,7 @@ a.modest-social:hover {
 .our-work {
   padding-top: 78px;
   background: #3a454d;
-  padding-bottom: 128px;
+  padding-bottom: 84px;
 }
 
 .our-work__gallery {
@@ -1393,7 +1396,7 @@ a.modest-social:hover {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  bottom: -67px;
+  bottom: -20px;
 }
 
 .services__h2 {
@@ -1781,6 +1784,10 @@ footer p {
   .item-links a{
     margin-right: -3px;
   }
+  .item-links a:hover .icon{
+    width: 1.3em;
+    height: 1.3em;
+  }
   .team__photo{
     height: 299px;
   }
@@ -1818,7 +1825,7 @@ footer p {
     bottom: -100px;
   }
   .features__item img{
-    transition: all .1s;
+    transition: all .2s;
   }
   .features__item img:hover{
     border: 3px solid #23b7a4;
@@ -1904,6 +1911,9 @@ footer p {
     -webkit-flex-basis: 300px;
     -ms-flex-preferred-size: 300px;
     flex-basis: 300px;
+  }
+  .more-galery{
+    bottom: -45px;
   }
   .features__item{
     margin-bottom: 20px;
@@ -2081,7 +2091,6 @@ footer p {
   }
   .our-work{
     padding-top: 30px;
-    padding-bottom: 80px;
   }
   .our-work__gallery{
     -webkit-justify-content: center;
