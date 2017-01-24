@@ -6,15 +6,14 @@
 			<div class="team-list ">
 				{% import "data/data.html" as tests %}
 				{% for test in tests.list %}
-				<div class="team__item">
-					<div class="team__photo">
-						<img src="{{test.img}}" alt="{{test.alt}}">
+				<div class="team__item" >
+					<div class="team__photo" style="background-image: url({{test.img}});">
 					</div>
 					<div class="team__desc desc">
 						<p class="desc__name">{{test.name}}</p>
 						<p class="desc__spec">{{test.specialization}}</p>
 					</div>
-					<div class="item-links cf">
+					<div class="item-links ">
 						<a href="{{test.tw}}">
 							{{mixins.icon('tw')}}
 						</a>

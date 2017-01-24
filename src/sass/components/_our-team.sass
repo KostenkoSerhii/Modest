@@ -5,21 +5,19 @@
 	padding-top: 80px
 	padding-bottom: 30px
 	border-top: 1px solid #dde1e4
-	+r(768)
+	+r(767)
 		padding-top: 30px
 	.item-links
 		position: absolute
 .team-list
-	display: flex
-	justify-content: center
-	flex-wrap: wrap
-	justify-content: space-around
+	text-align: center
 .team__desc	
 	background: #e1e6ea
 	padding: 14px 16px
 	transition: all .4s
 	position: relative
 	z-index: 1
+	text-align: left
 	+rmin(1200)
 		&:before
 			+coverdiv
@@ -36,11 +34,12 @@
 		font: 400 14px/17px "Open Sans"
 		color: $main-text-color
 .item-links
+	+clr
 	position: absolute
 	width: 100%
 	text-align: center
 	z-index: 3
-	bottom: -60px
+	bottom: -10px
 	transition: all .4s
 	+rmin(1200)
 		top: 126px
@@ -73,6 +72,9 @@
 	height: 240px
 	position: relative
 	z-index: 1
+	background-position: 50% 50%
+	background-size: cover
+	max-width: 263px
 	+rmin(1200)
 		height: 299px
 		&:before
@@ -83,13 +85,16 @@
 			opacity: 0
 			z-index: 2
 .team__item
-	flex-basis: 263px
-	flex-grow: 0
+	display: inline-block
+	width: 263px
 	height: 375px
 	transition: all .4s
 	position: relative
 	margin-bottom: 70px
 	+rmin(1200)
+		margin-right: 24px
+		&:last-of-type
+			margin-right: 0
 		&:hover
 			.team__desc	
 				&:before
@@ -101,13 +106,8 @@
 					opacity: 0.4
 			.item-links
 				opacity: 1
-	+r(1200)
-		width: 80%
-		height: 80%
-	+r(768)
+	+r(1199)
+		margin-left: 15px 
+		margin-right: 15px
+	+r(767)
 		margin: 0 5px 70px
-	img
-		max-width: 263px
-		max-height: 299px
-		height: 100%
-		width: 100%
