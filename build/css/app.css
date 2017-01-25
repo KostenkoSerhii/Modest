@@ -1907,7 +1907,7 @@ footer p {
   }
 }
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1199px){
   .fs-slider__h2{
     margin-top: 0;
   }
@@ -1917,6 +1917,10 @@ footer p {
   }
   .left-col{
     width: 440px;
+  }
+  .team__item{
+    margin-left: 15px;
+    margin-right: 15px;
   }
   .our-work__gallery .gallery__item{
     width: 300px;
@@ -1941,17 +1945,13 @@ footer p {
   }
 }
 
-@media only screen and (max-width: 1199px){
-  .team__item{
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-}
-
 @media only screen and (max-width: 992px){
   h2{
     font: 700 28px "Quattrocento Sans";
   }
+}
+
+@media only screen and (max-width: 991px){
   .menu__item:nth-of-type(1), .menu__item:nth-of-type(2), .menu__item:nth-of-type(3), .menu__item:nth-of-type(4), .menu__item:nth-of-type(5), .menu__item:nth-of-type(6), .menu__item:nth-of-type(7){
     margin-right: 0px;
   }
@@ -1994,16 +1994,6 @@ footer p {
   }
 }
 
-@media only screen and (max-width: 786px){
-  .first-screen .slick-dots{
-    bottom: 10px;
-  }
-  .contacts{
-    padding-top: 30px;
-    padding-bottom: 40px;
-  }
-}
-
 @media only screen and (max-width: 768px){
   h2{
     font-size: 20px;
@@ -2014,6 +2004,9 @@ footer p {
   h2:before, h2:after{
     display: none;
   }
+}
+
+@media only screen and (max-width: 767px){
   .header__menu{
     float: none;
     display: none;
@@ -2030,6 +2023,9 @@ footer p {
   }
   .header__menu-btn{
     display: block;
+  }
+  .first-screen .slick-dots{
+    bottom: 10px;
   }
   .fs-slider__desr{
     font: 400 14px/20px "Open Sans";
@@ -2095,6 +2091,12 @@ footer p {
     line-height: 24px;
     letter-spacing: 0;
   }
+  .our-team{
+    padding-top: 30px;
+  }
+  .team__item{
+    margin: 0 5px 70px;
+  }
   .our-work{
     padding-top: 30px;
   }
@@ -2134,6 +2136,10 @@ footer p {
   .contacts__h2{
     margin-bottom: 20px;
   }
+  .contacts{
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
   .after-map-container p{
     font: 400 14px/20px "Open Sans";
   }
@@ -2164,15 +2170,6 @@ footer p {
   }
   .footer-socials a{
     margin-right: 20px;
-  }
-}
-
-@media only screen and (max-width: 767px){
-  .our-team{
-    padding-top: 30px;
-  }
-  .team__item{
-    margin: 0 5px 70px;
   }
 }
 
