@@ -1,19 +1,18 @@
-.services__h2
-	color: $h2-color-mod
-	letter-spacing: -3px
-	margin-bottom: 84px
-	+r(767)
-		margin-bottom: 30px
-		letter-spacing: 0
 .services
 	padding-top: 78px
 	padding-bottom: 70px
 	+r(767)
 		padding-top: 30px
 		padding-bottom: 34px
-.work-list
+	&__h2
+		letter-spacing: -3px
+		margin-bottom: 84px
+		+r(767)
+			margin-bottom: 30px
+			letter-spacing: 0
+.services__list
 	text-align: center
-.work-list__item
+.services__item
 	vertical-align: top
 	display: inline-block
 	text-align: center
@@ -32,10 +31,17 @@
 		font: $main-text-style-mobile
 		margin: 0 0px 40px
 		width: 100%
+	div
+		width: 48px
+		height: 48px
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		margin: 0 auto
 	span
 		display: block
 		color: #292f36
-		font: 700 17px "Quattrocento Sans"
+		font: 700 17px "Quattrocento Sans", sans-serif
 		text-transform: uppercase
 		margin-top: 26px
 		margin-bottom: 20px

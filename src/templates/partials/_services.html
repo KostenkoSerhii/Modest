@@ -2,15 +2,15 @@
 		<div class="services" id="services">
 			<!--begin container-->
 			<div class="container">
-				<h2 class="services__h2">
+				<h2 class="services__h2 h2-black">
 					what we do.
 				</h2>
 				<!--begin -->
-				<div class="services__list work-list" >
+				<div class="services__list" >
 					{% import "data/data.html" as tests %}
 					{% for test in tests.list3 %}
-					<div class="work-list__item">
-						{{mixins.icon('services1')}}
+					<div class="services__item">
+						<div style="background-image: url('{{test.img}}');"></div>
 						<span>{{test.shortdesc}}</span>
 						<p>{{test.desc}}</p>
 					</div>

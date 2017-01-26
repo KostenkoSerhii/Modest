@@ -1,17 +1,16 @@
-.our-team__h2
-	color: #292f36
-	margin-bottom: 55px
 .our-team
 	padding-top: 80px
 	padding-bottom: 30px
 	border-top: 1px solid #dde1e4
 	+r(767)
 		padding-top: 30px
+	&__h2
+		margin-bottom: 55px
 	.item-links
 		position: absolute
 .team-list
 	text-align: center
-.team__desc	
+.person__desc-block
 	background: #e1e6ea
 	padding: 14px 16px
 	transition: all .4s
@@ -26,14 +25,14 @@
 			width: 0
 			z-index: -1 
 			transition: all .3s
-	.desc__name
+	.person__name
 		color: #292f36
-		font: 700 16px/26px "Quattrocento Sans"
+		font: 700 16px/26px "Quattrocento Sans", sans-serif
 		text-transform: uppercase
-	.desc__spec
-		font: 400 14px/17px "Open Sans"
+	.person__spec
+		font: 400 14px/17px "Open Sans", sans-serif
 		color: $main-text-color
-.item-links
+.person-links
 	+clr
 	position: absolute
 	width: 100%
@@ -68,7 +67,7 @@
 		width: 1.1em
 		height: 1.1em
 		+vcenter
-.team__photo
+.person__photo
 	height: 240px
 	position: relative
 	z-index: 1
@@ -96,15 +95,15 @@
 		&:last-of-type
 			margin-right: 0
 		&:hover
-			.team__desc	
+			.person__desc-block	
 				&:before
 					width: 100%
-			.desc__name, .desc__spec
+			.person__name, .person__spec
 				color: #fff
-			.team__photo
+			.person__photo
 				&:before
 					opacity: 0.4
-			.item-links
+			.person-links
 				opacity: 1
 	+r(1199)
 		margin-left: 15px 

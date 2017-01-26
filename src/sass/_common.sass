@@ -1,19 +1,19 @@
-$main-text-style: 400 16px/26px "Open Sans"
-$main-text-style-mobile: 400 14px/20px "Open Sans"
+$main-text-style: 400 16px/26px "Open Sans", sans-serif
+$main-text-style-mobile: 400 14px/20px "Open Sans", sans-serif
 $main-text-color: #8d8f92
 $h2-color-mod: #292f36
 *
 	box-sizing: border-box
 h2
 	color: white
-	font: 700 36px "Quattrocento Sans"
+	font: 700 36px "Quattrocento Sans", sans-serif
 	text-transform: uppercase
 	position: relative
 	padding-left: 24px
 	display: inline-block
 	letter-spacing: -2px
 	+r(992)
-		font: 700 28px "Quattrocento Sans"
+		font: 700 28px "Quattrocento Sans", sans-serif
 	+r(768)
 		font-size: 20px
 		display: block
@@ -39,6 +39,8 @@ h2
 		&:hover
 			&:after
 				height: 35px
+.h2-black
+		color: $h2-color-mod
 a
 	text-decoration: none
 .valid_form
@@ -52,7 +54,7 @@ a
 	border: 2px solid white
 	border-radius: 5px
 	color: white
-	font: 700 14px "Quattrocento Sans"
+	font: 700 14px "Quattrocento Sans", sans-serif
 	text-transform: uppercase
 	margin-right: 5px
 	z-index: 2

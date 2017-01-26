@@ -120,28 +120,12 @@ html {
   content: "";
 }
 
-.icon-services1:before {
+.icon-skype:before {
   content: "";
 }
 
-.icon-services2:before {
-  content: "";
-}
-
-.icon-services3:before {
-  content: "";
-}
-
-.icon-services4:before {
-  content: "";
-}
-
-.icon-skype:before {
-  content: "";
-}
-
 .icon-tw:before {
-  content: "";
+  content: "";
 }
 
 .icon-D {
@@ -180,30 +164,6 @@ html {
   fill: #FFF;
 }
 
-.icon-services1 {
-  width: 1em;
-  height: 1em;
-  fill: initial;
-}
-
-.icon-services2 {
-  width: 1em;
-  height: 1em;
-  fill: initial;
-}
-
-.icon-services3 {
-  width: 0.63em;
-  height: 1em;
-  fill: initial;
-}
-
-.icon-services4 {
-  width: 1em;
-  height: 1em;
-  fill: initial;
-}
-
 .icon-skype {
   width: 1.01em;
   height: 1em;
@@ -222,7 +182,7 @@ html {
 
 h2 {
   color: white;
-  font: 700 36px "Quattrocento Sans";
+  font: 700 36px "Quattrocento Sans", sans-serif;
   text-transform: uppercase;
   position: relative;
   padding-left: 24px;
@@ -247,6 +207,10 @@ h2:before {
   background: #e1e6ea;
 }
 
+.h2-black {
+  color: #292f36;
+}
+
 a {
   text-decoration: none;
 }
@@ -265,7 +229,7 @@ a {
   border: 2px solid white;
   border-radius: 5px;
   color: white;
-  font: 700 14px "Quattrocento Sans";
+  font: 700 14px "Quattrocento Sans", sans-serif;
   text-transform: uppercase;
   margin-right: 5px;
   z-index: 2;
@@ -1054,7 +1018,7 @@ h1 {
 
 .fs-slider__desr {
   color: #ccd0d7;
-  font: 400 16px/26px "Open Sans";
+  font: 400 16px/26px "Open Sans", sans-serif;
   max-width: 660px;
   width: 100%;
   margin-bottom: 36px;
@@ -1074,12 +1038,11 @@ h1 {
 }
 
 .we-modest__h2 {
-  color: #292f36;
   margin-bottom: 50px;
 }
 
 .modest-wrapper {
-  font: 400 16px/26px "Open Sans";
+  font: 400 16px/26px "Open Sans", sans-serif;
   color: #8d8f92;
 }
 
@@ -1175,26 +1138,25 @@ a.social-wrapper__icon:hover {
   border: 1px solid #23b7a4;
   text-align: center;
   color: #fff;
-  font: 700 20px/50px "Quattrocento Sans";
+  font: 700 20px/50px "Quattrocento Sans", sans-serif;
   text-transform: uppercase;
 }
 
 .we-modest__list span {
   color: #292f36;
-  font: 700 20px/32px "Quattrocento Sans";
+  font: 700 20px/32px "Quattrocento Sans", sans-serif;
   text-transform: uppercase;
   letter-spacing: -2px;
-}
-
-.our-team__h2 {
-  color: #292f36;
-  margin-bottom: 55px;
 }
 
 .our-team {
   padding-top: 80px;
   padding-bottom: 30px;
   border-top: 1px solid #dde1e4;
+}
+
+.our-team__h2 {
+  margin-bottom: 55px;
 }
 
 .our-team .item-links {
@@ -1205,7 +1167,7 @@ a.social-wrapper__icon:hover {
   text-align: center;
 }
 
-.team__desc {
+.person__desc-block {
   background: #e1e6ea;
   padding: 14px 16px;
   transition: all .4s;
@@ -1214,18 +1176,18 @@ a.social-wrapper__icon:hover {
   text-align: left;
 }
 
-.team__desc .desc__name {
+.person__desc-block .person__name {
   color: #292f36;
-  font: 700 16px/26px "Quattrocento Sans";
+  font: 700 16px/26px "Quattrocento Sans", sans-serif;
   text-transform: uppercase;
 }
 
-.team__desc .desc__spec {
-  font: 400 14px/17px "Open Sans";
+.person__desc-block .person__spec {
+  font: 400 14px/17px "Open Sans", sans-serif;
   color: #8d8f92;
 }
 
-.item-links {
+.person-links {
   *zoom: 1;
   position: absolute;
   width: 100%;
@@ -1235,13 +1197,13 @@ a.social-wrapper__icon:hover {
   transition: all .4s;
 }
 
-.item-links:after {
+.person-links:after {
   content: " ";
   display: table;
   clear: both;
 }
 
-.item-links a {
+.person-links a {
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -1251,15 +1213,15 @@ a.social-wrapper__icon:hover {
   transition: all .4s;
 }
 
-.item-links a:last-of-type {
+.person-links a:last-of-type {
   margin-right: 0;
 }
 
-.item-links a:hover {
+.person-links a:hover {
   background: #4e5a62;
 }
 
-.item-links .icon {
+.person-links .icon {
   transition: all .3s;
   z-index: 2;
   width: 1.1em;
@@ -1272,7 +1234,7 @@ a.social-wrapper__icon:hover {
   transform: translate(-50%, -50%);
 }
 
-.team__photo {
+.person__photo {
   height: 240px;
   position: relative;
   z-index: 1;
@@ -1281,7 +1243,7 @@ a.social-wrapper__icon:hover {
   max-width: 263px;
 }
 
-.team__item {
+.person {
   display: inline-block;
   width: 263px;
   height: 375px;
@@ -1290,15 +1252,15 @@ a.social-wrapper__icon:hover {
   margin-bottom: 70px;
 }
 
-.our-work__h2 {
-  letter-spacing: -3px;
-  margin-bottom: 55px;
-}
-
 .our-work {
   padding-top: 78px;
   background: #3a454d;
   padding-bottom: 96px;
+}
+
+.our-work__h2 {
+  letter-spacing: -3px;
+  margin-bottom: 55px;
 }
 
 .our-work__gallery {
@@ -1309,7 +1271,7 @@ a.social-wrapper__icon:hover {
   display: inline-block;
   position: relative;
   width: 360px;
-  font: 700 17px "Quattrocento Sans";
+  font: 700 17px "Quattrocento Sans", sans-serif;
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 22px;
@@ -1373,7 +1335,7 @@ a.social-wrapper__icon:hover {
   z-index: 2;
 }
 
-.more-galery {
+.more-gallery {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -1382,47 +1344,55 @@ a.social-wrapper__icon:hover {
   bottom: -35px;
 }
 
-.services__h2 {
-  color: #292f36;
-  letter-spacing: -3px;
-  margin-bottom: 84px;
-}
-
 .services {
   padding-top: 78px;
   padding-bottom: 70px;
 }
 
-.work-list {
+.services__h2 {
+  letter-spacing: -3px;
+  margin-bottom: 84px;
+}
+
+.services__list {
   text-align: center;
 }
 
-.work-list__item {
+.services__item {
   vertical-align: top;
   display: inline-block;
   text-align: center;
   color: #8d8f92;
-  font: 400 16px/26px "Open Sans";
+  font: 400 16px/26px "Open Sans", sans-serif;
   width: 263px;
   margin-bottom: 62px;
   margin-right: 15px;
 }
 
-.work-list__item:nth-of-type(4n) {
+.services__item:nth-of-type(4n) {
   margin-right: 0;
 }
 
-.work-list__item span {
+.services__item div {
+  width: 48px;
+  height: 48px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  margin: 0 auto;
+}
+
+.services__item span {
   display: block;
   color: #292f36;
-  font: 700 17px "Quattrocento Sans";
+  font: 700 17px "Quattrocento Sans", sans-serif;
   text-transform: uppercase;
   margin-top: 26px;
   margin-bottom: 20px;
   word-spacing: -2px;
 }
 
-.work-list__item .icon {
+.services__item .icon {
   height: 3em;
   width: 3em;
 }
@@ -1446,7 +1416,7 @@ a.social-wrapper__icon:hover {
   display: inline-block;
   text-align: left;
   vertical-align: top;
-  font: 400 16px/26px "Open Sans";
+  font: 400 16px/26px "Open Sans", sans-serif;
   color: #8d8f92;
   width: 360px;
   margin-right: 24px;
@@ -1478,21 +1448,20 @@ a.social-wrapper__icon:hover {
   display: block;
   margin-top: 55px;
   margin-bottom: 18px;
-  font: 700 18px "Quattrocento Sans";
+  font: 700 18px "Quattrocento Sans", sans-serif;
   text-transform: uppercase;
   letter-spacing: -1px;
-}
-
-.contacts__h2 {
-  color: #292f36;
-  word-spacing: -7px;
-  letter-spacing: 1px;
-  margin-bottom: 55px;
 }
 
 .contacts {
   padding-top: 64px;
   padding-bottom: 97px;
+}
+
+.contacts__h2 {
+  word-spacing: -7px;
+  letter-spacing: 1px;
+  margin-bottom: 55px;
 }
 
 .map {
@@ -1501,7 +1470,7 @@ a.social-wrapper__icon:hover {
 }
 
 .after-map-container p {
-  font: 400 16px/26px "Open Sans";
+  font: 400 16px/26px "Open Sans", sans-serif;
   color: #8d8f92;
   word-spacing: 6px;
   letter-spacing: -1px;
@@ -1523,7 +1492,7 @@ a.social-wrapper__icon:hover {
 
 .contacts__text-block > span {
   color: #292f36;
-  font: 700 20px "Quattrocento Sans";
+  font: 700 20px "Quattrocento Sans", sans-serif;
   text-transform: uppercase;
   display: block;
   margin-bottom: 28px;
@@ -1539,7 +1508,7 @@ a.social-wrapper__icon:hover {
   padding: 28px 30px;
   background: #fff;
   color: #8d8f92;
-  font: 700 14px "Quattrocento Sans";
+  font: 700 14px "Quattrocento Sans", sans-serif;
   text-transform: uppercase;
 }
 
@@ -1559,7 +1528,7 @@ a.social-wrapper__icon:hover {
 }
 
 .callback-form input, .callback-form textarea {
-  font: 400 16px/26px "Open Sans";
+  font: 400 16px/26px "Open Sans", sans-serif;
   color: #000;
   padding: 10px 15px;
   background: #eaeef1;
@@ -1597,7 +1566,7 @@ a.social-wrapper__icon:hover {
 footer {
   background: #3a454d;
   color: #8d8f92;
-  font: 400 14px "Open Sans";
+  font: 400 14px "Open Sans", sans-serif;
   padding-top: 39px;
   padding-bottom: 39px;
 }
@@ -1756,7 +1725,7 @@ footer p {
     height: 100%;
     background: #fff;
   }
-  .team__desc:before{
+  .person__desc-block:before{
     position: absolute;
     top: 0;
     left: 0;
@@ -1768,21 +1737,21 @@ footer p {
     z-index: -1;
     transition: all .3s;
   }
-  .item-links{
+  .person-links{
     top: 126px;
     opacity: 0;
   }
-  .item-links a{
+  .person-links a{
     margin-right: -3px;
   }
-  .item-links a:hover .icon{
+  .person-links a:hover .icon{
     width: 1.3em;
     height: 1.3em;
   }
-  .team__photo{
+  .person__photo{
     height: 299px;
   }
-  .team__photo:before{
+  .person__photo:before{
     transition: all .4s;
     content: '';
     position: absolute;
@@ -1794,22 +1763,22 @@ footer p {
     opacity: 0;
     z-index: 2;
   }
-  .team__item{
+  .person{
     margin-right: 24px;
   }
-  .team__item:last-of-type{
+  .person:last-of-type{
     margin-right: 0;
   }
-  .team__item:hover .team__desc:before{
+  .person:hover .person__desc-block:before{
     width: 100%;
   }
-  .team__item:hover .desc__name, .team__item:hover .desc__spec{
+  .person:hover .person__name, .person:hover .person__spec{
     color: #fff;
   }
-  .team__item:hover .team__photo:before{
+  .person:hover .person__photo:before{
     opacity: 0.4;
   }
-  .team__item:hover .item-links{
+  .person:hover .person-links{
     opacity: 1;
   }
   .our-work__gallery .gallery__item{
@@ -1830,10 +1799,10 @@ footer p {
   .our-work__gallery .gallery__item p{
     bottom: -100px;
   }
-  .work-list__item{
+  .services__item{
     margin-right: 24px;
   }
-  .work-list__item:nth-of-type(4n){
+  .services__item:nth-of-type(4n){
     margin-right: 0;
   }
   .features__item .img-block:hover:before{
@@ -1910,7 +1879,7 @@ footer p {
   .left-col{
     width: 440px;
   }
-  .team__item{
+  .person{
     margin-left: 15px;
     margin-right: 15px;
   }
@@ -1919,7 +1888,7 @@ footer p {
     margin-left: 10px;
     margin-right: 10px;
   }
-  .more-galery{
+  .more-gallery{
     bottom: -45px;
   }
   .features__item{
@@ -1939,7 +1908,7 @@ footer p {
 
 @media only screen and (max-width: 992px){
   h2{
-    font: 700 28px "Quattrocento Sans";
+    font: 700 28px "Quattrocento Sans", sans-serif;
   }
 }
 
@@ -2020,7 +1989,7 @@ footer p {
     bottom: 10px;
   }
   .fs-slider__desr{
-    font: 400 14px/20px "Open Sans";
+    font: 400 14px/20px "Open Sans", sans-serif;
   }
   .fs-slider__item{
     min-height: 200px;
@@ -2043,7 +2012,7 @@ footer p {
     margin-bottom: 15px;
   }
   .modest-wrapper{
-    font: 400 14px/20px "Open Sans";
+    font: 400 14px/20px "Open Sans", sans-serif;
   }
   .left-col{
     width: 100%;
@@ -2086,7 +2055,7 @@ footer p {
   .our-team{
     padding-top: 30px;
   }
-  .team__item{
+  .person{
     margin: 0 5px 70px;
   }
   .our-work{
@@ -2097,19 +2066,19 @@ footer p {
     width: 280px;
     height: 205px;
   }
-  .more-galery{
+  .more-gallery{
     bottom: -46px;
-  }
-  .services__h2{
-    margin-bottom: 30px;
-    letter-spacing: 0;
   }
   .services{
     padding-top: 30px;
     padding-bottom: 34px;
   }
-  .work-list__item{
-    font: 400 14px/20px "Open Sans";
+  .services__h2{
+    margin-bottom: 30px;
+    letter-spacing: 0;
+  }
+  .services__item{
+    font: 400 14px/20px "Open Sans", sans-serif;
     margin: 0 0px 40px;
     width: 100%;
   }
@@ -2118,22 +2087,22 @@ footer p {
     padding-bottom: 40px;
   }
   .features__item{
-    font: 400 14px/20px "Open Sans";
+    font: 400 14px/20px "Open Sans", sans-serif;
     margin: 0 5px 20px;
   }
   .features__item span{
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  .contacts__h2{
-    margin-bottom: 20px;
-  }
   .contacts{
     padding-top: 30px;
     padding-bottom: 40px;
   }
+  .contacts__h2{
+    margin-bottom: 20px;
+  }
   .after-map-container p{
-    font: 400 14px/20px "Open Sans";
+    font: 400 14px/20px "Open Sans", sans-serif;
   }
   .contacts__text-block{
     width: 100%;
