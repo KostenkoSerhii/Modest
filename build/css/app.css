@@ -180,17 +180,17 @@ html {
   box-sizing: border-box;
 }
 
-h2 {
+.h2 {
   color: white;
   font: 700 36px "Quattrocento Sans", sans-serif;
   text-transform: uppercase;
   position: relative;
   padding-left: 24px;
-  display: inline-block;
   letter-spacing: -2px;
+  text-align: left;
 }
 
-h2:before, h2:after {
+.h2:before, .h2:after {
   transition: all .4s;
   content: '';
   position: absolute;
@@ -203,7 +203,7 @@ h2:before, h2:after {
   transform: translateY(-50%);
 }
 
-h2:before {
+.h2:before {
   background: #e1e6ea;
 }
 
@@ -231,7 +231,6 @@ a {
   color: white;
   font: 700 14px "Quattrocento Sans", sans-serif;
   text-transform: uppercase;
-  margin-right: 5px;
   z-index: 2;
 }
 
@@ -850,18 +849,18 @@ img.mfp-img {
   cursor: pointer;
 }
 
-header {
+.header {
   background: #1d2126;
   min-height: 79px;
 }
 
-header .container {
+.header .container {
   padding-top: 24px;
   padding-bottom: 23px;
   *zoom: 1;
 }
 
-header .container:after {
+.header .container:after {
   content: " ";
   display: table;
   clear: both;
@@ -878,34 +877,7 @@ header .container:after {
 
 .menu__item {
   display: inline-block;
-}
-
-.menu__item:nth-of-type(1) {
-  margin-right: 27px;
-}
-
-.menu__item:nth-of-type(2) {
-  margin-right: 15px;
-}
-
-.menu__item:nth-of-type(3) {
-  margin-right: 15px;
-}
-
-.menu__item:nth-of-type(4) {
-  margin-right: 13px;
-}
-
-.menu__item:nth-of-type(5) {
-  margin-right: 3px;
-}
-
-.menu__item:nth-of-type(6) {
   margin-right: 5px;
-}
-
-.menu__item:nth-of-type(7) {
-  margin-right: 9px;
 }
 
 .menu__item a {
@@ -1018,7 +990,7 @@ h1 {
 
 .fs-slider__desr {
   color: #ccd0d7;
-  font: 400 16px/26px "Open Sans", sans-serif;
+  font: 400 16px/1.6 "Open Sans", sans-serif;
   max-width: 660px;
   width: 100%;
   margin-bottom: 36px;
@@ -1042,7 +1014,7 @@ h1 {
 }
 
 .modest-wrapper {
-  font: 400 16px/26px "Open Sans", sans-serif;
+  font: 400 16px/1.6 "Open Sans", sans-serif;
   color: #8d8f92;
 }
 
@@ -1120,15 +1092,18 @@ a.social-wrapper__icon:hover {
   padding-left: 90px;
 }
 
-.we-modest__list .list__item {
-  position: relative;
+.we-modest__list span {
+  color: #292f36;
+  font: 700 20px/1.6em "Quattrocento Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -2px;
 }
 
-.we-modest__list .list__item:nth-of-type(2) {
+.list:nth-of-type(2) {
   margin-bottom: 30px;
 }
 
-.we-modest__list .list__item .item__number {
+.list .item__number {
   position: absolute;
   left: -66px;
   top: 8px;
@@ -1142,11 +1117,8 @@ a.social-wrapper__icon:hover {
   text-transform: uppercase;
 }
 
-.we-modest__list span {
-  color: #292f36;
-  font: 700 20px/32px "Quattrocento Sans", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: -2px;
+.list .list__item {
+  position: relative;
 }
 
 .our-team {
@@ -1178,12 +1150,12 @@ a.social-wrapper__icon:hover {
 
 .person__desc-block .person__name {
   color: #292f36;
-  font: 700 16px/26px "Quattrocento Sans", sans-serif;
+  font: 700 16px/1.6em "Quattrocento Sans", sans-serif;
   text-transform: uppercase;
 }
 
 .person__desc-block .person__spec {
-  font: 400 14px/17px "Open Sans", sans-serif;
+  font: 400 14px/1.2em "Open Sans", sans-serif;
   color: #8d8f92;
 }
 
@@ -1255,7 +1227,11 @@ a.social-wrapper__icon:hover {
 .our-work {
   padding-top: 78px;
   background: #3a454d;
-  padding-bottom: 96px;
+  padding-bottom: 60px;
+}
+
+.our-work .container {
+  text-align: center;
 }
 
 .our-work__h2 {
@@ -1263,11 +1239,11 @@ a.social-wrapper__icon:hover {
   margin-bottom: 55px;
 }
 
-.our-work__gallery {
+.gallery {
   text-align: center;
 }
 
-.our-work__gallery .gallery__item {
+.gallery__item {
   display: inline-block;
   position: relative;
   width: 360px;
@@ -1280,12 +1256,12 @@ a.social-wrapper__icon:hover {
   height: 265px;
 }
 
-.our-work__gallery .gallery__item img {
+.gallery__item img {
   width: 100%;
   height: 100%;
 }
 
-.our-work__gallery .gallery__item a {
+.gallery__item a {
   display: block;
   position: relative;
   z-index: 2;
@@ -1293,7 +1269,7 @@ a.social-wrapper__icon:hover {
   height: 100%;
 }
 
-.our-work__gallery .gallery__item a:after {
+.gallery__item a:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -1306,7 +1282,7 @@ a.social-wrapper__icon:hover {
   z-index: 1;
 }
 
-.our-work__gallery .gallery__item a:before {
+.gallery__item a:before {
   transition: all .4s;
   opacity: 0;
   content: '+';
@@ -1323,7 +1299,7 @@ a.social-wrapper__icon:hover {
   z-index: 2;
 }
 
-.our-work__gallery .gallery__item p {
+.gallery__item p {
   text-align: left;
   transition: all .4s;
   width: 100%;
@@ -1336,12 +1312,7 @@ a.social-wrapper__icon:hover {
 }
 
 .more-gallery {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  bottom: -35px;
+  margin-top: 37px;
 }
 
 .services {
@@ -1363,7 +1334,7 @@ a.social-wrapper__icon:hover {
   display: inline-block;
   text-align: center;
   color: #8d8f92;
-  font: 400 16px/26px "Open Sans", sans-serif;
+  font: 400 16px/1.6 "Open Sans", sans-serif;
   width: 263px;
   margin-bottom: 62px;
   margin-right: 15px;
@@ -1387,7 +1358,7 @@ a.social-wrapper__icon:hover {
   color: #292f36;
   font: 700 17px "Quattrocento Sans", sans-serif;
   text-transform: uppercase;
-  margin-top: 26px;
+  margin-top: 38px;
   margin-bottom: 20px;
   word-spacing: -2px;
 }
@@ -1416,7 +1387,7 @@ a.social-wrapper__icon:hover {
   display: inline-block;
   text-align: left;
   vertical-align: top;
-  font: 400 16px/26px "Open Sans", sans-serif;
+  font: 400 16px/1.6 "Open Sans", sans-serif;
   color: #8d8f92;
   width: 360px;
   margin-right: 24px;
@@ -1426,13 +1397,13 @@ a.social-wrapper__icon:hover {
   margin-right: 0;
 }
 
-.features__item .img-block {
+.features__item > div {
   height: 240px;
   width: 100%;
   position: relative;
 }
 
-.features__item .img-block:before {
+.features__item > div:before {
   content: '';
   position: absolute;
   top: 0;
@@ -1441,7 +1412,7 @@ a.social-wrapper__icon:hover {
   height: 100%;
   opacity: 0;
   background: #000;
-  transition: all .2s;
+  transition: all .3s;
 }
 
 .features__item span {
@@ -1470,7 +1441,7 @@ a.social-wrapper__icon:hover {
 }
 
 .after-map-container p {
-  font: 400 16px/26px "Open Sans", sans-serif;
+  font: 400 16px/1.6 "Open Sans", sans-serif;
   color: #8d8f92;
   word-spacing: 6px;
   letter-spacing: -1px;
@@ -1499,7 +1470,7 @@ a.social-wrapper__icon:hover {
   letter-spacing: -1px;
 }
 
-.callback-form {
+.callback {
   position: absolute;
   right: 15px;
   top: -132px;
@@ -1512,23 +1483,14 @@ a.social-wrapper__icon:hover {
   text-transform: uppercase;
 }
 
-.callback-form span {
+.callback span {
   display: block;
   padding-left: 6px;
   margin-bottom: 5px;
 }
 
-.callback-form .input-wrapper {
-  display: inline-block;
-  width: 240px;
-}
-
-.callback-form .input-wrapper:first-of-type {
-  margin-right: 10px;
-}
-
-.callback-form input, .callback-form textarea {
-  font: 400 16px/26px "Open Sans", sans-serif;
+.callback input, .callback textarea {
+  font: 400 16px/1.6 "Open Sans", sans-serif;
   color: #000;
   padding: 10px 15px;
   background: #eaeef1;
@@ -1537,27 +1499,36 @@ a.social-wrapper__icon:hover {
   transition: all .4s;
 }
 
-.callback-form input:focus, .callback-form textarea:focus {
+.callback input:focus, .callback textarea:focus {
   border: 1px solid #23b7a4;
 }
 
-.callback-form input {
+.callback input {
   width: 100%;
 }
 
-.callback-form textarea {
+.callback textarea {
   display: block;
   width: 100%;
   resize: none;
   height: 160px;
 }
 
-.callback-form .textarea-wrapper {
+.callback__textarea-wrapper {
   margin-top: 27px;
   margin-bottom: 30px;
 }
 
-.callback-button {
+.callback__input-wrapper {
+  display: inline-block;
+  width: 240px;
+}
+
+.callback__input-wrapper:first-of-type {
+  margin-right: 10px;
+}
+
+.callback__button {
   background: #23b7a4;
   border: 2px solid #23b7a4;
   border-radius: 3px;
@@ -1632,11 +1603,11 @@ footer p {
 }
 
 @media only screen and (min-width: 992px){
-  h2:after{
+  .h2:after{
     height: 0;
     background: #23b7a4;
   }
-  h2:hover:after{
+  .h2:hover:after{
     height: 35px;
   }
   .container{
@@ -1670,7 +1641,7 @@ footer p {
   .container{
     width: 1170px;
   }
-  header .wrapper-fixed{
+  .header .wrapper-fixed{
     position: fixed;
     background: #1d2126;
     width: 100%;
@@ -1678,7 +1649,7 @@ footer p {
     top: 0;
     transition: all .4s;
   }
-  header .wrapper-fixed .container{
+  .header .wrapper-fixed .container{
     padding-top: 15px;
     padding-bottom: 15px;
   }
@@ -1699,10 +1670,10 @@ footer p {
     height: 1.5em;
     width: 1.5em;
   }
-  .we-modest__list .list__item .item__number{
+  .list .item__number{
     z-index: 1;
   }
-  .we-modest__list .list__item .item__number:before{
+  .list .item__number:before{
     transition: all .4s;
     content: '';
     position: absolute;
@@ -1717,10 +1688,10 @@ footer p {
     z-index: -1;
     background: transparent;
   }
-  .we-modest__list .list__item:hover .item__number{
+  .list .list__item:hover .item__number{
     color: #23b7a4;
   }
-  .we-modest__list .list__item:hover .item__number:before{
+  .list .list__item:hover .item__number:before{
     width: 100%;
     height: 100%;
     background: #fff;
@@ -1781,22 +1752,22 @@ footer p {
   .person:hover .person-links{
     opacity: 1;
   }
-  .our-work__gallery .gallery__item{
+  .gallery__item{
     margin-right: 24px;
   }
-  .our-work__gallery .gallery__item:nth-of-type(3n+3){
+  .gallery__item:nth-of-type(3n+3){
     margin-right: 0;
   }
-  .our-work__gallery .gallery__item:hover a:before{
+  .gallery__item:hover a:before{
     opacity: 1;
   }
-  .our-work__gallery .gallery__item:hover a:after{
+  .gallery__item:hover a:after{
     opacity: .3;
   }
-  .our-work__gallery .gallery__item:hover p{
+  .gallery__item:hover p{
     bottom: 0;
   }
-  .our-work__gallery .gallery__item p{
+  .gallery__item p{
     bottom: -100px;
   }
   .services__item{
@@ -1805,16 +1776,16 @@ footer p {
   .services__item:nth-of-type(4n){
     margin-right: 0;
   }
-  .features__item .img-block:hover:before{
+  .features__item > div:hover:before{
     opacity: .3;
   }
-  .callback-button:before{
+  .callback__button:before{
     background: #fff;
   }
-  .callback-button:hover{
+  .callback__button:hover{
     color: #23b7a4;
   }
-  .callback-button:hover:before{
+  .callback__button:hover:before{
     width: 100%;
   }
 }
@@ -1883,13 +1854,10 @@ footer p {
     margin-left: 15px;
     margin-right: 15px;
   }
-  .our-work__gallery .gallery__item{
+  .gallery__item{
     width: 300px;
     margin-left: 10px;
     margin-right: 10px;
-  }
-  .more-gallery{
-    bottom: -45px;
   }
   .features__item{
     margin-bottom: 20px;
@@ -1898,22 +1866,22 @@ footer p {
   .contacts__text-block{
     width: 450px;
   }
-  .callback-form{
+  .callback{
     width: 500px;
   }
-  .callback-form .input-wrapper{
+  .callback__input-wrapper{
     width: 205px;
   }
 }
 
 @media only screen and (max-width: 992px){
-  h2{
+  .h2{
     font: 700 28px "Quattrocento Sans", sans-serif;
   }
 }
 
 @media only screen and (max-width: 991px){
-  .menu__item:nth-of-type(1), .menu__item:nth-of-type(2), .menu__item:nth-of-type(3), .menu__item:nth-of-type(4), .menu__item:nth-of-type(5), .menu__item:nth-of-type(6), .menu__item:nth-of-type(7){
+  .menu__item{
     margin-right: 0px;
   }
   .left-col{
@@ -1925,11 +1893,14 @@ footer p {
   .contacts__text-block{
     width: 365px;
   }
-  .callback-form{
+  .callback{
     width: 350px;
   }
-  .callback-form .input-wrapper{
+  .callback__input-wrapper{
     width: 100%;
+  }
+  .callback__input-wrapper:first-of-type{
+    margin-right: 0px;
   }
 }
 
@@ -1956,13 +1927,12 @@ footer p {
 }
 
 @media only screen and (max-width: 768px){
-  h2{
+  .h2{
     font-size: 20px;
-    display: block;
     text-align: center;
     padding-left: 0;
   }
-  h2:before, h2:after{
+  .h2:before, .h2:after{
     display: none;
   }
 }
@@ -1989,7 +1959,7 @@ footer p {
     bottom: 10px;
   }
   .fs-slider__desr{
-    font: 400 14px/20px "Open Sans", sans-serif;
+    font: 400 14px/1.4em "Open Sans", sans-serif;
   }
   .fs-slider__item{
     min-height: 200px;
@@ -2012,7 +1982,7 @@ footer p {
     margin-bottom: 15px;
   }
   .modest-wrapper{
-    font: 400 14px/20px "Open Sans", sans-serif;
+    font: 400 14px/1.4em "Open Sans", sans-serif;
   }
   .left-col{
     width: 100%;
@@ -2034,23 +2004,22 @@ footer p {
   .we-modest__list{
     padding-left: 50px;
   }
-  .we-modest__list .list__item{
+  .we-modest__list span{
+    font-size: 16px;
+    letter-spacing: 0;
+  }
+  .list{
     margin-bottom: 20px;
   }
-  .we-modest__list .list__item:nth-of-type(2){
+  .list:nth-of-type(2){
     margin-bottom: 20px;
   }
-  .we-modest__list .list__item .item__number{
+  .list .item__number{
     left: -45px;
     top: 6px;
     width: 40px;
     height: 40px;
     line-height: 40px;
-  }
-  .we-modest__list span{
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0;
   }
   .our-team{
     padding-top: 30px;
@@ -2061,13 +2030,10 @@ footer p {
   .our-work{
     padding-top: 30px;
   }
-  .our-work__gallery .gallery__item{
+  .gallery__item{
     margin: 0 5px 30px;
     width: 280px;
     height: 205px;
-  }
-  .more-gallery{
-    bottom: -46px;
   }
   .services{
     padding-top: 30px;
@@ -2078,7 +2044,7 @@ footer p {
     letter-spacing: 0;
   }
   .services__item{
-    font: 400 14px/20px "Open Sans", sans-serif;
+    font: 400 14px/1.4em "Open Sans", sans-serif;
     margin: 0 0px 40px;
     width: 100%;
   }
@@ -2087,7 +2053,7 @@ footer p {
     padding-bottom: 40px;
   }
   .features__item{
-    font: 400 14px/20px "Open Sans", sans-serif;
+    font: 400 14px/1.4em "Open Sans", sans-serif;
     margin: 0 5px 20px;
   }
   .features__item span{
@@ -2102,20 +2068,20 @@ footer p {
     margin-bottom: 20px;
   }
   .after-map-container p{
-    font: 400 14px/20px "Open Sans", sans-serif;
+    font: 400 14px/1.4em "Open Sans", sans-serif;
   }
   .contacts__text-block{
     width: 100%;
     padding-top: 24px;
   }
-  .callback-form{
+  .callback{
     position: relative;
     top: 0;
     right: 0;
     padding: 15px 0;
     width: 100%;
   }
-  .callback-form input{
+  .callback input{
     margin-bottom: 10px;
   }
   footer{

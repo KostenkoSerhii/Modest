@@ -44,7 +44,7 @@
 		display: block
 		margin-bottom: 28px
 		letter-spacing: -1px
-.callback-form
+.callback
 	position: absolute
 	right: 15px
 	top: -132px
@@ -69,15 +69,6 @@
 		display: block
 		padding-left: 6px
 		margin-bottom: 5px
-	.input-wrapper
-		display: inline-block
-		width: 240px
-		+r(1199)
-			width: 205px
-		+r(991)
-			width: 100%
-		&:first-of-type
-			margin-right: 10px
 	input, textarea
 		font: $main-text-style
 		color: #000
@@ -97,10 +88,22 @@
 		width: 100%
 		resize: none
 		height: 160px
-	.textarea-wrapper
-		margin-top: 27px
-		margin-bottom: 30px
-.callback-button
+.callback__textarea-wrapper
+	margin-top: 27px
+	margin-bottom: 30px
+.callback__input-wrapper
+	display: inline-block
+	width: 240px
+	+r(1199)
+		width: 205px
+	+r(991)
+		width: 100%
+	&:first-of-type
+		margin-right: 10px
+	+r(991)
+		&:first-of-type
+			margin-right: 0px
+.callback__button
 	background: #23b7a4
 	border: 2px solid #23b7a4
 	border-radius: 3px

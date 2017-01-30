@@ -1,22 +1,21 @@
-$main-text-style: 400 16px/26px "Open Sans", sans-serif
-$main-text-style-mobile: 400 14px/20px "Open Sans", sans-serif
+$main-text-style: 400 16px/1.6 "Open Sans", sans-serif
+$main-text-style-mobile: 400 14px/1.4em "Open Sans", sans-serif
 $main-text-color: #8d8f92
 $h2-color-mod: #292f36
 *
 	box-sizing: border-box
-h2
+.h2
 	color: white
 	font: 700 36px "Quattrocento Sans", sans-serif
 	text-transform: uppercase
 	position: relative
 	padding-left: 24px
-	display: inline-block
 	letter-spacing: -2px
+	text-align: left
 	+r(992)
 		font: 700 28px "Quattrocento Sans", sans-serif
 	+r(768)
 		font-size: 20px
-		display: block
 		text-align: center
 		padding-left: 0
 	&:before, &:after
@@ -56,7 +55,7 @@ a
 	color: white
 	font: 700 14px "Quattrocento Sans", sans-serif
 	text-transform: uppercase
-	margin-right: 5px
+	//margin-right: 5px
 	z-index: 2
 	+rmin(1200)
 		transition: all .4s

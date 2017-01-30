@@ -76,44 +76,54 @@ a.social-wrapper__icon
 	padding-left: 90px
 	+r(767)
 		padding-left: 50px
+	span
+		color: #292f36
+		font: 700 20px/1.6em "Quattrocento Sans", sans-serif
+		text-transform: uppercase
+		letter-spacing: -2px
+		+r(767)
+			font-size: 16px
+			letter-spacing: 0
+.list
+	&:nth-of-type(2)
+		margin-bottom: 30px
+	+r(767)
+		margin-bottom: 20px
+		&:nth-of-type(2)
+			margin-bottom: 20px
+	.item__number
+		position: absolute
+		left: -66px
+		top: 8px
+		width: 50px
+		height: 50px
+		background: #23b7a4
+		border: 1px solid #23b7a4
+		text-align: center
+		color: #fff
+		font: 700 20px/50px "Quattrocento Sans", sans-serif
+		text-transform: uppercase
+		+r(767)
+			left: -45px
+			top: 6px
+			width: 40px
+			height: 40px
+			line-height: 40px
+	+rmin(1200)
+		.item__number
+			z-index: 1
+			&:before
+				transition: all .4s
+				content: ''
+				position: absolute
+				+vcenter
+				width: 0%
+				height: 0%
+				z-index: -1
+				background: transparent
 	.list__item
 		position: relative
-		&:nth-of-type(2)
-			margin-bottom: 30px
-		+r(767)
-			margin-bottom: 20px
-			&:nth-of-type(2)
-				margin-bottom: 20px
-		.item__number
-			position: absolute
-			left: -66px
-			top: 8px
-			width: 50px
-			height: 50px
-			background: #23b7a4
-			border: 1px solid #23b7a4
-			text-align: center
-			color: #fff
-			font: 700 20px/50px "Quattrocento Sans", sans-serif
-			text-transform: uppercase
-			+r(767)
-				left: -45px
-				top: 6px
-				width: 40px
-				height: 40px
-				line-height: 40px
 		+rmin(1200)
-			.item__number
-				z-index: 1
-				&:before
-					transition: all .4s
-					content: ''
-					position: absolute
-					+vcenter
-					width: 0%
-					height: 0%
-					z-index: -1
-					background: transparent
 			&:hover
 				.item__number
 					color: #23b7a4
@@ -121,12 +131,3 @@ a.social-wrapper__icon
 						width: 100%
 						height: 100%
 						background: #fff
-	span
-		color: #292f36
-		font: 700 20px/32px "Quattrocento Sans", sans-serif
-		text-transform: uppercase
-		letter-spacing: -2px
-		+r(767)
-			font-size: 16px
-			line-height: 24px
-			letter-spacing: 0

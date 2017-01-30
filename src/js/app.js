@@ -73,11 +73,11 @@ $(document).ready(function(){
 	/*end first galery*/
 
 	/*begin second popup galery*/
-	$('.more-galery').on('click', function () {
-		$(".popup-galery").magnificPopup('open');
+	$('.more-gallery').on('click', function () {
+		$(".popup-gallery").magnificPopup('open');
 	});
 
-	$('.popup-galery').each(function () {
+	$('.popup-gallery').each(function () {
 		$(this).magnificPopup({
 			delegate: 'a',
 			type: 'image',
