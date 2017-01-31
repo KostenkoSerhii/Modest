@@ -9,7 +9,6 @@
 	&__h2
 		letter-spacing: -3px
 		margin-bottom: 55px
-
 .gallery
 	text-align: center
 .gallery__item
@@ -34,7 +33,7 @@
 				&:after
 					opacity: .3
 			p
-				bottom: 0
+				transform: translateY(-100%)
 	+r(1199)
 		width: 300px
 		margin-left: 10px
@@ -74,12 +73,13 @@
 		transition: all .4s
 		width: 100%
 		position: absolute
-		bottom: 0
 		left: 0
 		background: #292f36
 		padding: 23px 18px
 		z-index: 2
 		+rmin(1200)
-			bottom: -100px			
+			transform: translateY(0%)	
+		+r(1199)
+			bottom: 0
 .more-gallery
 	margin-top: 37px
